@@ -14,7 +14,10 @@ const ProblemDescription = ({questionNo, setProblem}) => {
   }, [description]); 
   return (
     <div className="bg-[#0a0a0a] p-6 rounded-lg shadow-lg">
+      <div>
+        
       <h1 className="text-2xl font-bold">{questionNo}. {title}</h1>
+      </div>
       <div className="flex space-x-2 mt-2">
         <span className={`bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900`}>{difficulty}</span>
         
@@ -23,7 +26,7 @@ const ProblemDescription = ({questionNo, setProblem}) => {
       {examples.map((example, index) => (
         <div key={index}>
           <h2 className="mt-4 font-semibold">Example {index + 1}:</h2>
-          <pre className="bg-gray-800 text-sm p-2 rounded mt-1 text-wrap">
+          <pre className="bg-[#101317] text-sm p-2 rounded mt-1 text-wrap">
             Input: {example.input}<br/>
             Output: {example.output}<br/>
             {example.explanation && `Explanation: ${example.explanation}`}

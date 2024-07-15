@@ -44,7 +44,7 @@ const CodeEditor = ({ setCode }) => {
           </svg>
           Run
         </button>
-        <button className="flex items-center px-4 py-1 bg-[#4CAF50] text-white rounded hover:bg-[#45A049]">
+        <button className="flex items-center px-4 py-1 bg-blue-500 text-white rounded hover:bg-[#4565a0]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 mr-1"

@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import AIMessage from './AIMessage';
 import UserMessage from './UserMessage';
-
-const ChatContainer = ({ messages, setMessages ,setShowChat }) => {
+import { BeatLoader } from 'react-spinners';
+const ChatContainer = ({ messages, setMessages ,setShowChat, loader }) => {
   
   const [input, setInput] = useState('');
 
@@ -38,6 +38,9 @@ const ChatContainer = ({ messages, setMessages ,setShowChat }) => {
           ) : (
             <UserMessage key={msg.id} message={msg.text} />
           )
+        )}
+        {loader && (
+            <AIMessage  message={<BeatLoader color="#ffffff" loading={loader}/>} />
         )}
       </div>
       <div className="p-2">
